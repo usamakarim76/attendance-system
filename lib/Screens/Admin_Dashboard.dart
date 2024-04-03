@@ -16,7 +16,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Admin Dashboard'),
+        title: const Text('Admin Dashboard'),
       ),
       body: Center(
         child: Column(
@@ -27,9 +27,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 // Navigate to view student records screen
 
               },
-              child: Text('View Student Records'),
+              child: const Text('View Student Records'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Navigate to create reports screen
@@ -40,23 +40,23 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   ),
                 );
               },
-              child: Text('Create Reports'),
+              child: const Text('Create Reports'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Navigate to edit admin details screen
 
               },
-              child: Text('Edit Admin Details'),
+              child: const Text('Edit Admin Details'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Navigate to leave approval screen
 
               },
-              child: Text('Leave Approval'),
+              child: const Text('Leave Approval'),
             ),
           ],
         ),
@@ -74,7 +74,7 @@ class ViewStudentRecordsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('View Student Records'),
+        title: const Text('View Student Records'),
       ),
       body: StreamBuilder<List<String>>(
         stream: getUserAttendanceStream(userId),
@@ -86,7 +86,7 @@ class ViewStudentRecordsScreen extends StatelessWidget {
           }
 
           if (!snapshot.hasData) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
